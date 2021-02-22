@@ -1,0 +1,15 @@
+.saved-movies__divider {
+  min-height: 120px;
+}
+
+@media screen and (max-width: 900px) {
+  .saved-movies__divider {
+    min-height: 160px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .saved-movies__divider {
+    min-height: 140px;
+  }
+}

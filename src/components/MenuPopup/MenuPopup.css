@@ -1,0 +1,102 @@
+.menu-popup {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.menu-popup__container {
+  min-width: 520px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.menu-popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__close-popup {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: opacity linear 0.5s;
+  background-image: url("../../images/Menu/menu__close-popup-logo.svg");
+  background-size: contain;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  min-width: 37px;
+  min-height: 37px;
+  padding: 0;
+}
+
+.menu__close-popup:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .menu-popup {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu-popup__container {
+    min-width: 320px;
+  }
+}
+
+/* Изменения в SearchForm после открытия меню */
+
+.menu-popup__search-form {
+  padding: 61px 30px 40px;
+}
+
+.menu-popup__search::placeholder {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.menu-popup__search-logo {
+  display: none;
+}
+
+.menu-popup__form-container {
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  max-height: 48px;
+}
+
+.menu-popup__search-form-form {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .menu-popup__search-form {
+    padding: 61px 20px 40px;
+  }
+}

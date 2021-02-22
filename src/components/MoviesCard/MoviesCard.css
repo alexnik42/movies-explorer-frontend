@@ -1,0 +1,75 @@
+.movies-card {
+  max-width: 364px;
+  background-color: #fdfdfd;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.movies-card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movies-card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 14px 14px 0 14px;
+}
+
+.movies-card__movie-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 26px;
+}
+
+.movies-card__movie-name {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.movies-card__movie-duration {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.19;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+.movies-card__movie-bookmark {
+  max-width: 30px;
+  max-height: 30px;
+  transition: opacity linear 0.5s;
+}
+
+.movies-card__movie-bookmark:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.movies-card__movie-bookmark-delete {
+  transition: opacity linear 0.5s;
+}
+
+.movies-card__movie-bookmark-delete:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.movies-card__movie-image {
+  max-height: 203px;
+}
+
+@media screen and (max-width: 900px) {
+}

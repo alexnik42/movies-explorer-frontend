@@ -1,0 +1,190 @@
+.nav__container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__container-not-logged {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__sign {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__sign_not-logged {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #000;
+  transition: opacity linear 0.5s;
+}
+
+.nav__link:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.nav__link-not-logged {
+  text-decoration: none;
+  color: #000;
+  transition: opacity linear 0.5s;
+}
+
+.nav__link-not-logged:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.nav__films {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: 0em;
+  margin-right: 20px;
+}
+
+.nav__saved-films {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: 0em;
+  margin-right: 50px;
+}
+
+.nav__signup {
+  margin-right: 30px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.nav__signin-box {
+  display: flex;
+  min-width: 76px;
+  min-height: 32px;
+  background-color: #000000;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__signin-text {
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .nav__container {
+    min-height: 100vh;
+    padding: 159px 0px 92px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nav__sign {
+    min-height: calc(100vh-159px-92px);
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nav__sign * {
+    margin-right: 0;
+    margin-bottom: 30px;
+    border-bottom: none;
+  }
+
+  .nav__saved-films {
+    margin-bottom: 621px;
+  }
+
+  .nav__link {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0px;
+    text-align: center;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #000000;
+  }
+
+  .nav__link-account-logo {
+    border: none;
+  }
+
+  .nav__signin-box {
+    min-width: 76px;
+    min-height: 32px;
+  }
+
+  .nav__signup {
+    font-size: 12px;
+    line-height: 1.33;
+    margin-right: 30px;
+  }
+
+  .nav__signin-text {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav__container {
+    padding: 144px 0px 48px;
+    min-width: 320px;
+  }
+
+  .nav__sign * {
+    margin-bottom: 26px;
+  }
+
+  .nav__saved-films {
+    margin-bottom: 444px;
+  }
+
+  .nav__signin-box {
+    min-width: 54px;
+    min-height: 26px;
+  }
+
+  .nav__signup {
+    font-size: 10px;
+    line-height: 1.6;
+    margin-right: 14px;
+  }
+
+  .nav__signin-text {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}

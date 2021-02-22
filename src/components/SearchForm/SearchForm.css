@@ -1,0 +1,130 @@
+.search-form {
+  padding: 70px 70px 118px;
+}
+
+.search-form__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e8e8e8;
+  align-items: center;
+}
+
+.search-form__logo {
+  max-height: 34px;
+  max-width: 34px;
+  padding-left: 6px;
+}
+
+.search-form__form {
+  flex-grow: 1;
+  padding-left: 40px;
+}
+
+.search-form__set {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.search-form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-form__input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: text;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: 0px;
+  color: #a0a0a0;
+}
+
+.search-form__input::placeholder {
+  text-align: center;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: 0px;
+  color: #a0a0a0;
+}
+
+.search-form__submit {
+  background: #000000;
+  padding: 0;
+  border: 0;
+  border-radius: 48px;
+  color: #ffffff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.64;
+  letter-spacing: 0px;
+  text-align: center;
+  min-width: 58.65px;
+  min-height: 34px;
+  margin-left: 22px;
+  transition: opacity linear 0.5s;
+}
+
+.search-form__submit:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .search-form {
+    padding: 86px 30px 61px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .search-form__input {
+    max-width: 212px;
+  }
+
+  .search-form__input::placeholder {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-form {
+    padding: 88px 14px 50px;
+  }
+
+  .search-form__container {
+    padding-bottom: 10px;
+  }
+
+  .search-form__form {
+    padding: 0;
+  }
+
+  .search-form__logo {
+    display: none;
+  }
+
+  .search-form__input {
+    max-width: 212px;
+  }
+
+  .search-form__input::placeholder {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.21;
+  }
+
+  .search-form__submit {
+    margin-top: 5px;
+    margin-left: 8px;
+  }
+}
