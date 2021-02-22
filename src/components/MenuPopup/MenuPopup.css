@@ -63,7 +63,6 @@
 @media screen and (max-width: 500px) {
   .menu-popup__container {
     min-width: 320px;
-    right: 24px;
   }
 }
 
@@ -94,4 +93,10 @@
 
 .menu-popup__search-form-form {
   padding-left: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .menu-popup__search-form {
+    padding: 61px 20px 40px;
+  }
 }
