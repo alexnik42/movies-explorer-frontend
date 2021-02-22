@@ -1,0 +1,48 @@
+.filter-checkbox {
+  display: flex;
+  justify-content: center;
+  padding-top: 29px;
+}
+
+.filter-checkbox__container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.filter-checkbox__checkbox {
+  margin-right: 12px;
+  transition: opacity linear 0.5s;
+}
+
+.filter-checkbox__checkbox:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.filter-checkbox__text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .filter-checkbox {
+    padding-top: 42px;
+  }
+
+  .filter-checkbox__checkbox {
+    margin-right: 13px;
+    max-height: 20px;
+    max-width: 36px;
+  }
+
+  .filter-checkbox__text {
+    font-size: 11px;
+    line-height: 1.64;
+  }
+}
