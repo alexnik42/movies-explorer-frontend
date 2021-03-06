@@ -1,33 +1,43 @@
+import { NavLink } from "react-router-dom";
+
 import "./Navigation.css";
 import accountLogo from "../../images/Navigation/nav__account-logo.svg";
 
-function Navigation({ isLogged }) {
-  return isLogged ? (
+function Navigation({ loggedIn, menuPopupOpen, menuPopupClose }) {
+  return loggedIn ? (
     <nav className="nav__container">
       <ul className="nav__sign">
         <li className="nav__films">
-          <a className="nav__link" href="./">
+          <NavLink className="nav__link" to="/" onClick={menuPopupClose}>
             Главная
-          </a>
+          </NavLink>
         </li>
         <li className="nav__films">
-          <a className="nav__link" href="./movies">
+          <NavLink className="nav__link" to="/movies" onClick={menuPopupClose}>
             Фильмы
-          </a>
+          </NavLink>
         </li>
         <li className="nav__saved-films">
-          <a className="nav__link" href="./saved-movies">
+          <NavLink
+            className="nav__link"
+            to="/saved-movies"
+            onClick={menuPopupClose}
+          >
             Сохранённые фильмы
-          </a>
+          </NavLink>
         </li>
         <li className="nav__account-container">
-          <a className="nav__link nav__link-account-logo" href="./profile">
+          <NavLink
+            className="nav__link nav__link-account-logo"
+            to="/profile"
+            onClick={menuPopupClose}
+          >
             <img
               src={accountLogo}
               className="nav__account-logo"
               alt="Логотип аккаунта"
             />
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
@@ -35,14 +45,14 @@ function Navigation({ isLogged }) {
     <nav className="nav__container-not-logged">
       <ul className="nav__sign_not-logged">
         <li className="nav__signup">
-          <a className="nav__link-not-logged" href="./signup">
+          <NavLink className="nav__link-not-logged" to="/signup">
             Регистрация
-          </a>
+          </NavLink>
         </li>
         <li className="nav__signin-box">
-          <a className="nav__link-not-logged" href="./signin">
+          <NavLink className="nav__link-not-logged" to="/signin">
             <p className="nav__signin-text">Войти</p>
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
