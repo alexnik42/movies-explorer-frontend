@@ -4,7 +4,7 @@ import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import "./App.css";
 import moviesApi from "../../utils/MoviesApi";
 import mainApi from "../../utils/MainApi";
-import { ROUTES } from "../../utils/constants";
+import { MAIN_API_URL, ROUTES } from "../../utils/constants";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 import Main from "../Main/Main";
@@ -49,7 +49,9 @@ function App() {
           image: movie.image
             ? `https://api.nomoreparties.co${movie.image.url}`
             : "",
-          trailer: movie.trailerLink ? movie.trailerLink : "Не указано",
+          trailer: movie.trailerLink
+            ? movie.trailerLink
+            : `${MAIN_API_URL}/not-found`,
           thumbnail: movie.image
             ? `https://api.nomoreparties.co${movie.image.url}`
             : "",
@@ -228,7 +230,7 @@ function App() {
       .register(ROUTES.SIGNUP, name, email, password)
       .then((user) => {
         if (user._id) {
-          handleLogin(email, password);
+          handleLogin({ email: email, password: password });
         }
       })
       .catch((err) => {
@@ -348,9 +350,7 @@ function App() {
                 menuPopupClose={menuPopupClose}
               />
             </Route>
-            <Route path="/">
-              <NotFound />
-            </Route>
+            <Route path="*" exact={true} component={NotFound} />
           </Switch>
         </div>
       </div>
