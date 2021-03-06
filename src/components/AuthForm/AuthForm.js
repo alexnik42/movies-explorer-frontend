@@ -18,7 +18,7 @@ function AuthForm({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(values, resetForm);
+    onSubmit(values);
   };
 
   const handleLinkClick = () => {

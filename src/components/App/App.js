@@ -210,11 +210,10 @@ function App() {
     }
   }, []);
 
-  const handleLogin = ({ email, password }, resetForm) => {
+  const handleLogin = ({ email, password }) => {
     mainApi
       .authorize(ROUTES.SIGNIN, email, password)
       .then((user) => {
-        resetForm();
         if (user._id) {
           handleCookieCheck();
         }
@@ -224,11 +223,10 @@ function App() {
       });
   };
 
-  const handleRegistration = ({ name, email, password }, resetForm) => {
+  const handleRegistration = ({ name, email, password }) => {
     mainApi
       .register(ROUTES.SIGNUP, name, email, password)
       .then((user) => {
-        resetForm();
         if (user._id) {
           handleLogin(email, password);
         }
