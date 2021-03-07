@@ -1,0 +1,30 @@
+.search-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 70px;
+}
+
+.search-error__title {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: 0px;
+  color: #fe8e76;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .search-error__title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-error__title {
+    font-size: 14px;
+  }
+}

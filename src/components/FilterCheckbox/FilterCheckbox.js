@@ -1,15 +1,17 @@
-import React from "react";
-
 import "./FilterCheckbox.css";
 import isCheckedImage from "../../images/FilterCheckbox/filter-checkbox__checkbox_checked.svg";
 import notCheckedImage from "../../images/FilterCheckbox/filter-checkbox__checkbox_not-checked.svg";
 
-function FilterCheckbox({ isChecked }) {
+function FilterCheckbox({ shortMovie, handleShortMovieChange }) {
+  const handleCheckboxClick = () => {
+    handleShortMovieChange();
+  };
+
   return (
-    <div className="filter-checkbox">
+    <div className="filter-checkbox" onClick={handleCheckboxClick}>
       <div className="filter-checkbox__container">
         <img
-          src={isChecked ? isCheckedImage : notCheckedImage}
+          src={shortMovie ? isCheckedImage : notCheckedImage}
           className="filter-checkbox__checkbox"
           alt="Короткометражки: статус"
         />

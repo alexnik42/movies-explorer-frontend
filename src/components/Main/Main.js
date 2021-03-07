@@ -6,10 +6,14 @@ import Techs from "../Techs/Techs";
 import AboutMe from "../AboutMe/AboutMe";
 import Footer from "../Footer/Footer";
 
-function Main() {
+function Main({ loggedIn, menuPopupOpen, menuPopupClose }) {
   return (
     <>
-      <Header isLogged={false} />
+      <Header
+        loggedIn={loggedIn}
+        menuPopupOpen={menuPopupOpen}
+        menuPopupClose={menuPopupClose}
+      />
       <Promo />
       <AboutProject />
       <Techs />
