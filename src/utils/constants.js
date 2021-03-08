@@ -1,7 +1,5 @@
 const MOVIE_API_URL = "https://api.nomoreparties.co/beatfilm-movies";
-const MAIN_API_URL = "http://localhost:3000"
-  
-//"https://api.movies-explorer.alexnik42.students.nomoredomains.monster";
+const MAIN_API_URL = "https://api.movies-explorer.alexnik42.students.nomoredomains.monster";
 
 const API_HEADERS = {
   "Content-Type": "application/json",
