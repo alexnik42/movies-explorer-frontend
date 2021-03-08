@@ -21,7 +21,7 @@ function MoviesCard({
   const parseDuration = (duration) => {
     const hours = Math.floor(duration / 60);
     const minutes = duration - 60 * hours;
-    return `${hours}ч ${minutes} м`;
+    return `${hours} ч ${minutes} м`;
   };
 
   return (

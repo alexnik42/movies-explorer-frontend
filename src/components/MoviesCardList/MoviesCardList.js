@@ -47,9 +47,9 @@ function MoviesCardList({
   return (
     <div className="movies-cardlist">
       <ul className="movies-cardlist__container">
-        {(type === "all-movies" ? moviesToShow : movies).map((movie, idx) => (
+        {(type === "all-movies" ? moviesToShow : movies).map((movie) => (
           <MoviesCard
-            key={idx}
+            key={movie.movieId}
             movie={movie}
             savedMovies={savedMovies}
             addToBookmarks={addToBookmarks}

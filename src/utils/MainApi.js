@@ -48,7 +48,7 @@ class MainApi {
   }
 
   async removeFromBookmarks(route, movie) {
-    return fetch(`${this._baseUrl}/${route}/${movie._id}`, {
+    return fetch(`${this._baseUrl}/${route}/${movie.movieId}`, {
       method: "delete",
       headers: this._headers,
       credentials: this._credentials,

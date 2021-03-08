@@ -120,20 +120,11 @@ function App() {
       try {
         const newMovie = await mainApi.addToBookmark(ROUTES.MOVIES, movie);
         setSavedMovies([newMovie, ...savedMovies]);
-        const updatedAllMovies = allMovies.map((el) =>
-          el.movieId === newMovie.movieId ? newMovie : el
-        );
-        const updatedCurrentMovies = currentMovies.map((el) =>
-          el.movieId === newMovie.movieId ? newMovie : el
-        );
-        setAllMovies(updatedAllMovies);
-        localStorage.setItem("movies", JSON.stringify(updatedAllMovies));
-        setCurrentMovies(updatedCurrentMovies);
       } catch (err) {
         console.log(err);
       }
     },
-    [allMovies, currentMovies, savedMovies]
+    [savedMovies]
   );
 
   const removeFromBookmarks = useCallback(
@@ -143,19 +134,21 @@ function App() {
           ROUTES.MOVIES,
           movie
         );
-        const updatedMovies = savedMovies.filter(
-          (movie) => movie._id !== deletedMovie._id
+        const updatedSavedMovies = savedMovies.filter(
+          (movie) => movie.movieId !== deletedMovie.movieId
         );
-        setSavedMovies(updatedMovies);
-        if (type === "saved-movies") {
-          setCurrentMovies(updatedMovies);
-          setCurrentSavedMovies(updatedMovies);
+        setSavedMovies(updatedSavedMovies);
+        if (type === 'saved-movies') {
+          const updatedCurrentMovies = currentMovies.filter(
+            (movie) => movie.movieId !== deletedMovie.movieId
+          );
+          setCurrentMovies(updatedCurrentMovies);
         }
       } catch (err) {
         console.log(err);
       }
     },
-    [savedMovies]
+    [savedMovies, currentMovies]
   );
 
   const handleCurrentUserInfoChange = ({ name, email }) => {

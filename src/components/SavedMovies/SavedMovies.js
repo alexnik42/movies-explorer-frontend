@@ -29,6 +29,9 @@ function SavedMovies({
     getSavedMovies();
   }, [getSavedMovies]);
 
+  console.log(savedMovies);
+
+
   return (
     <>
       <Header
@@ -49,7 +52,7 @@ function SavedMovies({
       {(searchStatus === "search_finished" || searchStatus === "") && (
         <MoviesCardList
           movies={
-            currentMovies.length === 0 ? currentSavedMovies : currentMovies
+            currentMovies.length === 0 ? savedMovies : currentMovies
           }
           savedMovies={savedMovies}
           addToBookmarks={addToBookmarks}
