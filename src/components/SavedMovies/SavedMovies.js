@@ -29,9 +29,6 @@ function SavedMovies({
     getSavedMovies();
   }, [getSavedMovies]);
 
-  console.log(savedMovies);
-
-
   return (
     <>
       <Header
